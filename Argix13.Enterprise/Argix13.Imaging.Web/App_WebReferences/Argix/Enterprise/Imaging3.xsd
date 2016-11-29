@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix.Enterprise" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix.Enterprise" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DocumentClasses">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentClass" nillable="true" type="tns:DocumentClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentClasses" nillable="true" type="tns:DocumentClasses" />
+  <xs:complexType name="DocumentClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentClass" nillable="true" type="tns:DocumentClass" />
+  <xs:complexType name="MetaDatas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MetaData" nillable="true" type="tns:MetaData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MetaDatas" nillable="true" type="tns:MetaDatas" />
+  <xs:complexType name="MetaData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Property" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MetaData" nillable="true" type="tns:MetaData" />
+  <xs:complexType name="SearchRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxResults" type="xs:int" />
+      <xs:element minOccurs="0" name="Operand1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operand2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operand3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyName1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyName2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyName3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyValue1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyValue2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyValue3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScopeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchRequest" nillable="true" type="tns:SearchRequest" />
+</xs:schema>

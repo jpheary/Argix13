@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Enterprise" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Enterprise" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Enterprise/Imports">
+      <xsd:import schemaLocation="http://localhost:51231/Imaging.svc?xsd=xsd0" namespace="http://Argix.Enterprise" />
+      <xsd:import schemaLocation="http://localhost:51231/Imaging.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:51231/Imaging.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51231/Imaging.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix.Enterprise" />
+      <xsd:import schemaLocation="http://localhost:51231/Imaging.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IImagingService_GetDocumentClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentClasses" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetDocumentClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetDocumentClasses_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetDocumentClassesByDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentClassesByDepartment" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetDocumentClassesByDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentClassesByDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetDocumentClassesByDepartment_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetMetaData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetMetaData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetMetaData_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q3:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetMetaDataByClassName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaDataByClassName" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetMetaDataByClassName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaDataByClassNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetMetaDataByClassName_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q4:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_SearchSharePointImageStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSharePointImageStore" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_SearchSharePointImageStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSharePointImageStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_SearchSharePointImageStore_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q5:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetSharePointImageStream_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharePointImageStream" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetSharePointImageStream_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharePointImageStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetSharePointImageStream_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q6:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetSharePointImageStreamByUri_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharePointImageStreamByUri" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetSharePointImageStreamByUri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharePointImageStreamByUriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagingService_GetSharePointImageStreamByUri_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q7:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:portType name="IImagingService">
+    <wsdl:operation name="GetDocumentClasses">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IImagingService/GetDocumentClasses" message="tns:IImagingService_GetDocumentClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IImagingService/GetDocumentClassesResponse" message="tns:IImagingService_GetDocumentClasses_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IImagingService_GetDocumentClasses_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentClassesByDepartment">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IImagingService/GetDocumentClassesByDepartment" message="tns:IImagingService_GetDocumentClassesByDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IImagingService/GetDocumentClassesByDepartmentResponse" message="tns:IImagingService_GetDocumentClassesByDepartment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IImagingService_GetDocumentClassesByDepartment_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IImagingService/GetMetaData" message="tns:IImagingService_GetMetaData_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IImagingService/GetMetaDataResponse" message="tns:IImagingService_GetMetaData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IImagingService_GetMetaData_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaDataByClassName">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IImagingService/GetMetaDataByClassName" message="tns:IImagingService_GetMetaDataByClassName_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IImagingService/GetMetaDataByClassNameResponse" message="tns:IImagingService_GetMetaDataByClassName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IImagingService_GetMetaDataByClassName_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSharePointImageStore">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IImagingService/SearchSharePointImageStore" message="tns:IImagingService_SearchSharePointImageStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IImagingService/SearchSharePointImageStoreResponse" message="tns:IImagingService_SearchSharePointImageStore_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IImagingService_SearchSharePointImageStore_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSharePointImageStream">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IImagingService/GetSharePointImageStream" message="tns:IImagingService_GetSharePointImageStream_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IImagingService/GetSharePointImageStreamResponse" message="tns:IImagingService_GetSharePointImageStream_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IImagingService_GetSharePointImageStream_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSharePointImageStreamByUri">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IImagingService/GetSharePointImageStreamByUri" message="tns:IImagingService_GetSharePointImageStreamByUri_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IImagingService/GetSharePointImageStreamByUriResponse" message="tns:IImagingService_GetSharePointImageStreamByUri_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IImagingService_GetSharePointImageStreamByUri_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

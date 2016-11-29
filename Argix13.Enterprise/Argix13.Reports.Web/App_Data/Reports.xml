@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<reports Text="Argix Logistics">
+  <department Text="Customer Service">
+    <report Text="Amscan Imperial Delivery" Value="AmscanImperialDelivery" NavigateUrl="~/CustomerService/AmscanImperialDelivery.aspx" ToolTip="Amscan Imperial Delivery report" />
+    <report Text="ASN Tracking" Value="ASNTracking" NavigateUrl="~/CustomerService/ASNTracking.aspx" ToolTip="ASN Tracking report" />
+    <report Text="B&amp;N Nook Tracking" Value="BNNookTracking" NavigateUrl="~/CustomerService/BNNookTracking.aspx"  ToolTip="BN Nook Tracking report" />
+    <report Text="Carton Info For Pickup" Value="CartonInfoForPickup" NavigateUrl="~/CustomerService/CartonInfoForPickup.aspx" ToolTip="Carton Info For Pickup report" />
+    <report Text="Carton Number Discrepancy" Value="CartonNumberDiscrepancy" NavigateUrl="~/CustomerService/CartonNumberDiscrepancy.aspx" ToolTip="Carton Number Discrepancy report" />
+    <report Text="Carton Number Discrepancy (Non-Manifest)" Value="CartonNumberDiscrepancyFromText" NavigateUrl="~/CustomerService/CartonNumberDiscrepancyFromText.aspx" ToolTip="Carton Number Discrepancy From Text report" />
+    <report Text="Carton Number Discrepancy By Pickup Date" Value="CartonNumberDiscrepancyByPickupDate" NavigateUrl="~/CustomerService/CartonNumberDiscrepancyByPickupDate.aspx" ToolTip="Pickup Date Carton Number Discrepancy report" />
+    <report Text="Carton Search" Value="CartonSearch" NavigateUrl="~/CustomerService/CartonSearch.aspx" ToolTip="Carton Search report" />
+    <report Text="Cartons Cap" Value="CartonsCap" NavigateUrl="~/CustomerService/CartonsCap.aspx" ToolTip="Cartons Cap report" />
+    <report Text="CBOL Invoice Summary" Value="CBOLInvoiceSummary" NavigateUrl="~/CustomerService/CBOLInvoiceSummary.aspx" ToolTip="CBOL Invoice Summary report" />
+    <report Text="Client Pickup" Value="ClientPickup" NavigateUrl="~/CustomerService/ClientPickup.aspx" ToolTip="Client Pickup report" />
+    <report Text="Daily Store Shipments" Value="DailyStoreShipments" NavigateUrl="~/CustomerService/DailyStoreShipments.aspx" ToolTip="Daily Store Shipments report" />
+    <report Text="Damaged Cartons" Value="DamagedCartons" NavigateUrl="~/CustomerService/DamagedCartons.aspx" ToolTip="Damaged Cartons report" />
+    <report Text="Deleted Items" Value="DeletedItems" NavigateUrl="~/CustomerService/DeletedItems.aspx" ToolTip="Deleted Items report" />
+    <report Text="Delivery Info By Pickup" Value="DeliveryInfoByPickup" NavigateUrl="~/CustomerService/DeliveryInfoByPickup.aspx" ToolTip="Delivery Info By Pickup report" />
+    <report Text="Discrepancy" Value="Discrepancy" NavigateUrl="~/CustomerService/Discrepancy.aspx" ToolTip="Discrepancy report" />
+    <report Text="Duplicate Cartons" Value="DuplicateCartons" NavigateUrl="~/CustomerService/DuplicateCartons.aspx" ToolTip="Duplicate Cartons report" />
+    <report Text="Inbound Pallet Shipment Tracking" Value="InboundPalletShipmentTracking" NavigateUrl="~/CustomerService/InboundPalletShipmentTracking.aspx" ToolTip="Inbound Pallet Shipment Tracking report" />
+    <report Text="Inbound Shipment Tracking" Value="InboundShipmentTracking" NavigateUrl="~/CustomerService/InboundShipmentTracking.aspx" ToolTip="Inbound Shipment Tracking report" />
+    <report Text="Indirect Discrepancy" Value="IndirectDiscrepancy" NavigateUrl="~/CustomerService/IndirectDiscrepancy.aspx" ToolTip="Indirect Discrepancy report" />
+    <report Text="Inducted Cartons" Value="InductedCartons" NavigateUrl="~/CustomerService/InductedCartons.aspx" ToolTip="Inducted Cartons report" />
+    <report Text="Label Station" Value="LabelStation" NavigateUrl="~/CustomerService/LabelStation.aspx" ToolTip="Label Station report" />
+    <report Text="L'Occitane Delivery" Value="LOccitaneDelivery" NavigateUrl="~/CustomerService/LOccitaneDelivery.aspx" ToolTip="LOccitane Delivery report" />
+    <report Text="MultiCarton POD" Value="MultiCartonPOD" NavigateUrl="~/CustomerService/MultiCartonPOD.aspx" ToolTip="MultiCarton POD report" />
+    <report Text="Multiple Pickup Combined Discrepancy" Value="MultiPickupCombinedDiscrepancy" NavigateUrl="~/CustomerService/MultiPickupDiscrepancy.aspx" ToolTip="Multiple Pickup Combined Discrepancy report" />
+    <report Text="Multiple Pickup Sort Info (Amscan Bypass)" Value="MultiPickupSortInfo" NavigateUrl="~/CustomerService/MultiPickupSortInfo.aspx" ToolTip="MultiPickup Sort Info report" />
+    <report Text="PacSun Summary" Value="PacSunSummary" NavigateUrl="~/CustomerService/PacSunSummary.aspx" ToolTip="Pac Sun Summary report" />
+    <report Text="PacSun Delivery" Value="PacSunDelivery" NavigateUrl="~/CustomerService/PacSunDelivery.aspx" ToolTip="Pac Sun Delivery report" />
+    <report Text="Projected Delivery Schedule" Value="ProjectedDeliverySchedule" NavigateUrl="~/CustomerService/ProjectedDeliverySchedule.aspx" ToolTip="Projected Delivery Schedule report" />
+    <report Text="Requested Delivery Date" Value="RequestedDeliveryDate" NavigateUrl="~/CustomerService/RequestedDeliveryDate.aspx" ToolTip="Requested Delivery Date report" />
+    <report Text="Time Period Carton Compare" Value="TimePeriodCartonCompare" NavigateUrl="~/CustomerService/TimePeriodCartonCompare.aspx" ToolTip="Time Period Carton Compare report" />
+    <report Text="Vitamin Shoppe Delivery" Value="VitaminShoppeDelivery" NavigateUrl="~/CustomerService/VitaminShoppeDelivery.aspx" ToolTip="Vitamin Shoppe Delivery report" />
+  </department>
+  <department Text="Executive">
+    <report Text="Delivery Window Detail By Store" Value="DeliveryWindowDetailByStore" NavigateUrl="~/Executive/DeliveryWindowDetailByStore.aspx" ToolTip="Delivery Window Detail By Store report" />
+    <report Text="Delivery Window Summary By Agent" Value="DeliveryWindowSummaryByAgent" NavigateUrl="~/Executive/DeliveryWindowSummaryByAgent.aspx" ToolTip="Delivery Window Summary By Agent report" />
+    <report Text="Delivery Window Summary By Client" Value="DeliveryWindowSummaryByClient" NavigateUrl="~/Executive/DeliveryWindowSummaryByClient.aspx" ToolTip="Delivery Window Summary By Client report" />
+    <report Text="Delivery Window Summary By Store" Value="DeliveryWindowSummaryByStore" NavigateUrl="~/Executive/DeliveryWindowSummaryByStore.aspx" ToolTip="Delivery Window Summary By Store report" />
+    <report Text="Outbound Trailer Weight and Cube" Value="OutboundTrailerWeightAndCube" NavigateUrl="~/Executive/OutboundTrailerWeightAndCube.aspx" ToolTip="Outbound Trailer Weight And Cube report" />
+    <report Text="POD Compliance" Value="PODCompliance" NavigateUrl="~/Executive/PODCompliance.aspx" ToolTip="POD Compliance report" />
+    <report Text="POD Compliance Detail" Value="PODComplianceDetail" NavigateUrl="~/Executive/PODComplianceDetail.aspx" ToolTip="POD Compliance Detail report" />
+    <report Text="POD Not Received" Value="PODNotReceived" NavigateUrl="~/Executive/PODNotReceived.aspx" ToolTip="POD Not Received report" />
+    <report Text="Return Trailer Weight Comparison" Value="ReturnTrailerWeightComparison" NavigateUrl="~/Executive/ReturnTrailerWeightComparison.aspx" ToolTip="Return Trailer Weight Comparison report" />
+    <report Text="Scanning Detail By Store" Value="ScanningDetailByStore" NavigateUrl="~/Executive/ScanningDetailByStore.aspx" ToolTip="Scanning Detail By Store report" />
+    <report Text="Scanning Summary By Agent" Value="ScanningSummaryByAgent" NavigateUrl="~/Executive/ScanningSummaryByAgent.aspx" ToolTip="Scanning Summary By Agent report" />
+    <report Text="Scanning Summary By Client" Value="ScanningSummaryByClient" NavigateUrl="~/Executive/ScanningSummaryByClient.aspx" ToolTip="Scanning Summary By Client report" />
+    <report Text="Scanning Summary By Store" Value="ScanningSummaryByStore" NavigateUrl="~/Executive/ScanningSummaryByStore.aspx" ToolTip="Scanning Summary By Store report" />
+    <report Text="Shipment Tracking" Value="ShipmentTracking" NavigateUrl="~/Executive/ShipmentTracking.aspx" ToolTip="Shipment Tracking report" />
+    <report Text="Virtual vs Optimized Trailer Load" Value="VirtualvsOptimizedTrailerLoad" NavigateUrl="~/Executive/VirtualvsOptimizedTrailerLoad.aspx" ToolTip="Virtualvs Optimized Trailer Load report" />
+  </department>
+  <department Text="Finance">
+    <report Text="Loreal PROs Without BOL" Value="LorealPROsWithoutBOL" NavigateUrl="~/Finance/LorealPROsWithoutBOL.aspx" ToolTip="Loreal PROs Without BOL" />
+    <report Text="Pollock Paper Invoice" Value="PollockPaperInvoice" NavigateUrl="~/Finance/PollockPaperInvoice.aspx" ToolTip="Pollock Paper Invoice" />
+  </department>
+  <department Text="Internal">
+    <report Text="Internal Delivery Window By Store" Value="InternalDeliveryWindowByStore" NavigateUrl="~/Internal/InternalDeliveryWindowByStore.aspx" ToolTip="Internal Delivery Window By Store report" />
+  </department>
+  <department Text="Operations">
+    <report Text="Audit Trailer" Value="AuditTrailer" NavigateUrl="~/Operations/AuditTrailer.aspx" ToolTip="Audit Trailer report" />
+    <report Text="Carton Number Discrepancy" Value="CartonNumberDiscrepancy" NavigateUrl="~/CustomerService/CartonNumberDiscrepancy.aspx" ToolTip="Carton Number Discrepancy report" />
+    <report Text="Client Cube" Value="ClientCube" NavigateUrl="~/Operations/ClientCube.aspx" ToolTip="Client Cube report" />
+    <report Text="Client Cube and Weight" Value="ClientCubeAndWeight" NavigateUrl="~/Operations/ClientCubeAndWeight.aspx" ToolTip="Client Cube And Weight report" />
+    <report Text="Client Indirect Sort" Value="IndirectSort" NavigateUrl="~/Operations/IndirectSort.aspx" ToolTip="Indirect Sort report" />
+    <report Text="Client Pickup" Value="ClientPickup" NavigateUrl="~/CustomerService/ClientPickup.aspx" ToolTip="Client Pickup report" />
+    <report Text="Damaged Cartons" Value="DamagedCartons" NavigateUrl="~/CustomerService/DamagedCartons.aspx" ToolTip="Damaged Cartons report" />
+    <report Text="Deleted Items" Value="DeletedItems" NavigateUrl="~/CustomerService/DeletedItems.aspx" ToolTip="Deleted Items report" />
+    <report Text="Delivery Paperwork" Value="DeliveryPaperwork" NavigateUrl="~/Operations/DeliveryPaperwork.aspx" ToolTip="Delivery Paperwork report" />
+    <report Text="Discrepancy" Value="Discrepancy" NavigateUrl="~/CustomerService/Discrepancy.aspx" ToolTip="Discrepancy report" />
+    <report Text="Duplicate Cartons" Value="DuplicateCartons" NavigateUrl="~/CustomerService/DuplicateCartons.aspx" ToolTip="Duplicate Cartons report" />
+    <report Text="Inbound Manifest" Value="InboundManifest" NavigateUrl="~/Operations/InboundManifest.aspx" ToolTip="Inbound Manifest report" />
+    <report Text="Indirect Discrepancy" Value="IndirectDiscrepancy" NavigateUrl="~/CustomerService/IndirectDiscrepancy.aspx" ToolTip="Indirect Discrepancy report" />
+    <report Text="Multiple Carton Search" Value="MultipleCartonSearch" NavigateUrl="~/Operations/MultipleCartonSearch.aspx" ToolTip="Multiple Carton Search report" />
+    <report Text="Shift" Value="Shift" NavigateUrl="~/Operations/Shift.aspx" ToolTip="Shift report" />
+    <report Text="Sorted BMC" Value="SortedBMC" NavigateUrl="~/Operations/SortedBMC.aspx" ToolTip="Sorted BMC report" />
+    <report Text="Station Totals" Value="StationTotals" NavigateUrl="~/Operations/StationTotals.aspx" ToolTip="Station Totals report" />
+    <report Text="TL History" Value="TLHistory" NavigateUrl="~/Operations/TLHistory.aspx" ToolTip="TL History report" />
+  </department>
+  <department Text="Server">
+    <department Text="Agent Control">
+      <report Text="BN Store List for Dina" Value="BNStoreListforDina" NavigateUrl="~/Server/Default.aspx?ItemPath=%2fShowcase+Reports%2fAgent%2fBN%20Store%20List%20for%20Dina" ToolTip="BN Store List for Dina report" />
+    </department>
+  </department>
+  <department Text="Terminals">
+    <report Text="Daily Route Detail" Value="DailyRouteDetail" NavigateUrl="~/Terminals/Daily Route Detail.aspx" ToolTip="Roadshow Daily Route Detail" />
+    <report Text="Inbound Pallet Shipment Tracking" Value="InboundPalletShipmentTracking" NavigateUrl="~/CustomerService/InboundPalletShipmentTracking.aspx" ToolTip="Inbound Pallet Shipment Tracking report" />
+    <report Text="Ship Schedule Arrivals" Value="ShipScheduleArrivals" NavigateUrl="~/Terminals/Ship Schedule Arrivals.aspx" ToolTip="Ship Schedule Arrivals" />
+    <report Text="Ship Schedule Departures" Value="ShipScheduleDepartures" NavigateUrl="~/Terminals/Ship Schedule Departures.aspx" ToolTip="Ship Schedule Departures" />
+    <report Text="Ship Schedule OFDs" Value="ShipScheduleOFDs" NavigateUrl="~/Terminals/Ship Schedule OFDs.aspx" ToolTip="Ship Schedule OFDs" />
+  </department>
+</reports>

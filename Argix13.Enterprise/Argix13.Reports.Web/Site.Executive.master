@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Site.Executive.master.cs" Inherits="SiteExecutiveMaster" %>
+<%@ MasterType VirtualPath="~/Site.master" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="Setup" Runat="Server">
+<div style="margin:25px 0px 0px 50px">
+    Retail&nbsp;
+    <asp:DropDownList id="cboDateParam" runat="server" Width="96px" AutoPostBack="True" OnSelectedIndexChanged="OnDateParamChanged">
+        <asp:ListItem Text="Week" Value="Week" Selected="True" />
+        <asp:ListItem Text="Month" Value="Month" />
+        <asp:ListItem Text="Quarter" Value="Quarter" />
+        <asp:ListItem Text="YTD" Value="YTD" />
+    </asp:DropDownList>
+    &nbsp;
+    <asp:DropDownList id="cboDateValue" runat="server" Width="240px" DataSourceID="odsDates" DataTextField="Value" DataValueField="Value" AutoPostBack="True" />
+</div>
+<div style="margin:10px 0px 0px 50px">
+    Client&nbsp;
+    <asp:DropDownList id="cboClient" runat="server" Width="288px" DataSourceID="odsClients" DataTextField="ClientName" DataValueField="ClientNumber" AutoPostBack="True" OnSelectedIndexChanged="OnClientChanged"></asp:DropDownList>
+    &nbsp;&nbsp;
+    <asp:CheckBox ID="chkActiveOnly" runat="server" AutoPostBack="true" Text="Active Only" Checked="true" OnCheckedChanged="OnActiveOnlyChecked" />
+</div>
+<div style="margin:10px 0px 0px 50px">
+    Scope&nbsp;
+    <asp:DropDownList id="cboParam" runat="server" Width="96px" AutoPostBack="True" OnSelectedIndexChanged="OnScopeParamChanged">
+        <asp:ListItem Selected="True">Divisions</asp:ListItem>
+        <asp:ListItem>Agents</asp:ListItem>
+        <asp:ListItem>Regions</asp:ListItem>
+        <asp:ListItem>Districts</asp:ListItem>
+        <asp:ListItem>Stores</asp:ListItem>
+    </asp:DropDownList>
+    &nbsp;
+    <asp:DropDownList id="cboValue" runat="server" Width="288px" DataSourceID="odsValues" DataTextField="DistrictName" DataValueField="District" AutoPostBack="True" AppendDataBoundItems="true" OnSelectedIndexChanged="OnScopeValueChanged">
+        <asp:ListItem Text="All" Value="" Selected="True" />
+    </asp:DropDownList>
+    <asp:TextBox ID="txtStore" runat="server" Width="120px" Visible="false" AutoPostBack="True" OnTextChanged="OnStoreChanged" />
+</div>
+<div style="margin:10px 0px 0px 50px">
+    <asp:DropDownList id="cboSubAgent" runat="server" Width="288px" Visible="false" AppendDataBoundItems="true" DataTextField="AgentSummary" DataValueField="AgentNumber" AutoPostBack="True" OnSelectedIndexChanged="OnSubAgentChanged">
+        <asp:ListItem Text="All" Value="" Selected="True"></asp:ListItem>
+    </asp:DropDownList>
+</div>
+<div style="margin:10px 0px 0px 50px">
+    Filters&nbsp;
+    <table style="width:100%">
+        <tr><td style="width:75px">&nbsp;</td><td style="width:200px">&nbsp;</td><td>&nbsp;</td></tr>
+        <tr>
+            <td style="text-align:right"><asp:ContentPlaceHolder id="FilterPrefix1" runat="server"></asp:ContentPlaceHolder>&nbsp;</td>
+            <td><asp:ContentPlaceHolder id="FilterControl1" runat="server"></asp:ContentPlaceHolder></td>
+            <td><asp:ContentPlaceHolder id="FilterSuffix1" runat="server"></asp:ContentPlaceHolder></td>
+        </tr>
+        <tr style="font-size:1px; height:6px"><td colspan="3">&nbsp;</td></tr>
+        <tr>
+            <td style="text-align:right"><asp:ContentPlaceHolder id="FilterPrefix2" runat="server"></asp:ContentPlaceHolder>&nbsp;</td>
+            <td><asp:ContentPlaceHolder id="FilterControl2" runat="server"></asp:ContentPlaceHolder></td>
+            <td><asp:ContentPlaceHolder id="FilterSuffix2" runat="server"></asp:ContentPlaceHolder></td>
+        </tr>
+        <tr style="font-size:1px; height:6px"><td colspan="3">&nbsp;</td></tr>
+    </table>
+</div>
+<asp:ObjectDataSource ID="odsDates" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetRetailDates" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="600">
+    <SelectParameters>
+        <asp:ControlParameter Name="scope" ControlID="cboDateParam" PropertyName="SelectedValue" Type="String" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+<asp:ObjectDataSource ID="odsClients" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetSecureClients" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="900">
+    <SelectParameters>
+        <asp:ControlParameter Name="activeOnly" ControlID="chkActiveOnly" PropertyName="Checked" Type="Boolean" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+<asp:ObjectDataSource ID="odsValues" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetClientDistricts" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="600" >
+    <SelectParameters>
+        <asp:ControlParameter Name="number" ControlID="cboClient" PropertyName="SelectedValue" DefaultValue="" ConvertEmptyStringToNull="true" Type="String" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+<asp:ObjectDataSource ID="odsSubAgents" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetAgentLocations" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="600" >
+    <SelectParameters>
+        <asp:ControlParameter Name="agent" ControlID="cboValue" PropertyName="SelectedValue" Type="String" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+</asp:Content>
+

@@ -1,0 +1,47 @@
+              --------------------------------------------------------
+							Enterprise Services Readme File
+		                       		October, 2014
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2014-2014
+
+This document provides late-breaking or other information that supplements the Enterprise Services documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+The Enterprise Service is a WCF web application that provides Enterprise 
+business services related to Argix Logistics business activities for Tracking,
+Barcoding, Imaging, SMTP, Bing Maps, etc.
+
+
+DEPENDENCIES
+SharePoint Portal search services (http://rgxshpntnew:9000) for document images.
+SMTP services (smtp.argix.com) for SMTP mail services.
+Bing Map services (http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3&mkt=en-us) for web maps.
+USPS Tracking services (http://Production.shippingapis.com/ShippingAPI.dll) for postal tracking.
+
+
+VERSION HISTORY
+v4.5.0, 05/16/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- ported from Argix10.Enterprise.Services.
+

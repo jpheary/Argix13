@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <asp:ContentPlaceHolder id="head" runat="server" />
+    <title>Argix Logistics Reports 2015</title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+        <%: Scripts.Render("~/bundles/jquery","~/bundles/jqueryui") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript">
+        function beginRequest(sender, args) { window.status = "..."; document.body.style.cursor = "wait"; }
+        function pageLoaded(sender, args) { window.status = ""; document.body.style.cursor = "default"; }
+
+        function toggleNav() {
+            var navtitle = document.getElementById("navtitle");
+            navtitle.hidden = !navtitle.hidden;
+            var nav = document.getElementById("nav");
+            nav.hidden = !nav.hidden;
+            document.getElementById("services").className = nav.hidden ? "gridtoolbarfullscreen" : "gridtoolbar";
+            document.getElementById("views").className = nav.hidden ? "gridmainfullscreen" : "gridmain";
+        }
+    </script>
+</head>
+<body onbeforeunload="javascript:document.body.style.cursor='wait';" onunload="javascript:document.body.style.cursor='wait';">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <%--<asp:ScriptReference Name="jquery" />--%>
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <script type="text/javascript">
+                <%-- Wire-up event habdlers to implement wait-default cursor for every ajax call --%>
+            Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+            Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoaded);
+		</script>	
+        <div class="gridcontainer">
+            <div class="gridbox gridheader">
+                <div class="header">
+                    <asp:Image ID="imgReports" runat="server" ImageUrl="~/Content/Images/argix-logo.gif" style="height:36px; border:0;" />
+                    &nbsp;<asp:Label id="lblReportTitle" runat="server" CssClass="title" Text="" />
+                </div>
+            </div>
+            <div class="gridline"></div>
+            <div id="flyout" class="gridflyout">
+                <div class="flyout"><asp:ImageButton ID="imgExplore" runat="server" ImageUrl="~/Content/Images/explore_off.gif" ToolTip="Click to toggle open/close" style="width:23px; border:0;" OnClientClick="javascript:toggleNav(); return false;" /></div>
+            </div>
+            <div id="navtitle" class="gridbox gridmenutitle">
+                <div class="menutitle">Reports 2015</div>
+            </div>
+            <div id="nav" class="gridbox gridmenu">
+                <asp:TreeView ID="trvMain" runat="server" Width="100%" DataSourceID="xmlRpts" ImageSet="XPFileExplorer" BackColor="#FFFFFF" ForeColor="#000000" Font-Size="12px" Target="_self" PopulateNodesFromClient="False" EnableTheming="True" ExpandDepth="1" OnTreeNodeDataBound="OnTreeNodeDataBound" >
+                    <NodeStyle NodeSpacing="2px" />
+                    <HoverNodeStyle Font-Underline="True" />
+                    <SelectedNodeStyle BackColor="Highlight" ForeColor="#ffffff" />
+                    <DataBindings>
+                        <asp:TreeNodeBinding DataMember="reports" TextField="Text" SelectAction="Expand" />
+                        <asp:TreeNodeBinding DataMember="department" TextField="Text" SelectAction="Expand" />
+                        <asp:TreeNodeBinding DataMember="report" TextField="Text" ValueField="Value" NavigateUrlField="NavigateUrl" ToolTipField="ToolTip" />
+                    </DataBindings>
+                </asp:TreeView>
+            </div>
+            <div id="services" class="gridbox gridtoolbar">
+                <div class="toolbar">
+                    <asp:UpdatePanel ID="upnlToolbar" runat="server" UpdateMode="Always" >
+                    <ContentTemplate>
+                        <asp:Button ID="btnSetup" runat="server" CssClass="toolbarbutton" BorderStyle="Inset" Text="Setup" ToolTip="Setup the report parameters" CommandName="Setup" OnCommand="OnButtonCommand" />
+                        <asp:Button ID="btnRun" runat="server" CssClass="toolbarbutton" Text="Run" Enabled="true" ToolTip="Run the report" CommandName="Run" OnCommand="OnButtonCommand" />
+                        <asp:Button ID="btnData" runat="server" CssClass="toolbarbutton" Text="Data" Enabled="true" ToolTip="Return the raw report data in a table" CommandName="Data" OnCommand="OnButtonCommand" />
+                    </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </div>
+            <div id="views" class="gridbox gridmain">
+                <asp:UpdatePanel ID="upnlViewer" runat="server" UpdateMode="Always" >
+                <ContentTemplate>
+                    <asp:MultiView ID="mvMain" runat="server" ActiveViewIndex="0">
+                        <asp:View ID="vwParams" runat="server">
+                            <asp:ContentPlaceHolder id="Setup" runat="server" />
+                        </asp:View>
+                        <asp:View ID="vwReport" runat="server">
+                            <rsweb:reportviewer id="rsViewer" runat="server" Height="100%" Width="98%" BorderStyle="None" BorderWidth="0px" BackColor="White" ProcessingMode="Local" AsyncRendering="True" KeepSessionAlive="true" ExportContentDisposition="OnlyHtmlInline" ShowFindControls="false" ShowPrintButton="true" ZoomMode="Percent" ZoomPercent="100" OnReportError="OnViewerError"></rsweb:reportviewer>
+                        </asp:View>
+                    </asp:MultiView>
+                </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <div class="gridbox gridfooter">
+                <div class="footer">
+                    <p>Copyright 2013-2015 Argix Logistics, Inc. v20150330</p>
+                </div>
+            </div>
+        </div>
+        <asp:XmlDataSource ID="xmlRpts" runat="server" DataFile="~/App_Data/Reports.xml" EnableCaching="true" CacheExpirationPolicy="Absolute" CacheDuration="Infinite"></asp:XmlDataSource>
+    </form>
+</body>
+</html>

@@ -1,0 +1,364 @@
+﻿/* GRAY USED IN SITE #c5c7c9  */
+/* RED USED IN SITE #ee2a24  */
+
+body {
+    margin:0px 0px;
+	font-family:Calibri, sans-serif;
+	font-size:12px;
+	color:#000000;
+	background-color:#ffffff;
+    text-align: left;
+}
+
+/* Structure and Behavior ------------------------------------------ */
+.gridcontainer {
+    position:absolute;
+    width:100%;
+    height:100%;
+    margin:0px 0px;
+}
+.gridbox {
+    border:0px solid #c5c7c9;
+}
+.gridheader {
+    position:absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    height:48px;
+}
+.gridline {
+    position:absolute;
+    top:48px;
+    right:0px;
+    left:28px;
+    height:2px; 
+    background-color:#ee2a24;
+    font-size: 1px;
+}
+.gridflyout {
+    position:absolute;
+    top:50px;
+    bottom:50px;
+    left:0px;
+    width:25px;
+    border-right:0px solid #c5c7c9;
+	background-color:#ffffff;
+}
+.gridmenutitle {
+    position:absolute;
+    top:50px;
+    left:28px;
+    width:300px;
+    height:30px;
+    border:0px solid #c5c7c9;
+	background-color:#ee2a24;
+}
+.gridmenu {
+    position:absolute;
+    top:80px;
+    bottom:50px;
+    left:28px;
+    width:300px;
+    background-color:#ffffff;
+    border:1px solid #c5c7c9;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+.gridtoolbar {
+    position:absolute;
+    top:50px;
+    right:0px;
+    left:331px;
+    height:30px;
+}
+.gridtoolbarfullscreen {
+    position:absolute;
+    top:50px;
+    right:0px;
+    left:28px;
+    height:30px;
+}
+.gridmain {
+    position:absolute;
+    top:80px;
+    right:0px;
+    bottom:50px;
+    left:331px;
+    border:1px solid #c5c7c9;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+.gridmainfullscreen {
+    position:absolute;
+    top:80px;
+    right:0px;
+    bottom:50px;
+    left:28px;
+    border:1px solid #c5c7c9;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+.gridfooter {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    height:50px;
+    color:#000000;
+}
+
+/* Content formatting ---------------------------------------------- */
+.header {
+    padding: 5px 0px 0px 20px;
+}
+.title {
+    padding: 0px 0px 0px 225px;
+    font-size: 20px;
+    font-style: italic;
+}
+.flyout {
+    height:125px;
+    margin:30px 0px;
+    padding:0px 0px;
+    border:1px solid #c5c7c9;
+    border-right-style:none;
+}
+.menutitle {
+    padding: 2px 0px 0px 10px;
+    font-size: 16px;
+    color:#ffffff;
+    font-weight:600;
+}
+.toolbar {
+    padding: 5px 0px 0px 25px;
+}
+.toolbarbutton {
+    width: 75px;
+    height: 20px;
+    margin: 0px 5px 0px 5px;
+    padding: 0px 5px;
+    font-size: 0.9em;
+    border-style:outset;
+}
+.footer {
+    padding: 8px 25px 0px 40px;
+    text-align: left;
+    font-size: 1.0em;
+    font-style:italic;
+}
+
+/* Controls -------------------------------------------------------- */
+/* Structure and Behavior ------------------------------------------ */
+.gridcontrol {
+    width:100%;
+    height:100%;
+    margin:0px 0px;
+    padding:0px 0px;
+}
+.gridclient {
+    float:left;
+    width:58%;
+    height:100%;
+    margin:0% 0.5%;
+}
+.gridagent {
+    float:left;
+    width:38%;
+    height:100%;
+    margin:0% 0.5%;
+}
+.griddivision {
+    float:left;
+    width:38%;
+    height:100%;
+    margin:0% 0.5%;
+}
+.gridshipper {
+    float:left;
+    width:38%;
+    height:100%;
+    margin:0% 0.5%;
+}
+.gridvendor {
+    float:left;
+    width:38%;
+    height:100%;
+    margin:0% 0.5%;
+}
+/* Content formatting ---------------------------------------------- */
+.clienttitle {
+    height:22px;
+    background-image:url(../../Content/Images/gridtitle.gif); 
+    background-repeat:repeat-x;
+}
+.clienttitlename {
+    float:left;
+    padding:2px 10px;
+}
+.clienttitlesearch {
+    float:right;
+    padding:1px 0px;
+}
+.clienttitlesearch input[type="text"] {
+    width:75px;
+    margin:1px 2px;
+    border:1px solid lightgray;
+}
+.clienttitlesearch input[type="image"] {
+    height:18px;
+    margin:1px 2px;
+    vertical-align:top;
+}
+.client {
+    height:250px;
+    border:1px solid lightgray;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+.agenttitle {
+    height:22px;
+    background-image:url(../../Content/Images/gridtitle.gif); 
+    background-repeat:repeat-x;
+}
+.agenttitlename {
+    float:left;
+    padding:2px 10px;
+}
+.agenttitlesearch {
+    float:right;
+    padding:0px 0px;
+}
+.agenttitlesearch input[type="text"] {
+    width:75px;
+    margin:1px 2px;
+    border:1px solid lightgray;
+}
+.agenttitlesearch input[type="image"] {
+    height:18px;
+    margin:1px 2px;
+    vertical-align:top;
+}
+.agent { 
+    height:250px;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+.divisiontitle {
+    height:22px;
+    background-image:url(../../Content/Images/gridtitle.gif); 
+    background-repeat:repeat-x;
+}
+.divisiontitlename {
+    float:left;
+    padding:2px 10px;
+}
+.divisiontitlesearch {
+    float:right;
+    padding:0px 0px;
+}
+.divisiontitlesearch input[type="text"] {
+    width:75px;
+    margin:1px 2px;
+    border:1px solid lightgray;
+}
+.divisiontitlesearch input[type="image"] {
+    height:18px;
+    margin:1px 2px;
+    vertical-align:top;
+}
+.division { 
+    height:250px;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+.shippertitle {
+    height:22px;
+    background-image:url(../../Content/Images/gridtitle.gif); 
+    background-repeat:repeat-x;
+}
+.shippertitlename {
+    float:left;
+    padding:2px 10px;
+}
+.shippertitlesearch {
+    float:right;
+    padding:0px 0px;
+}
+.shippertitlesearch input[type="text"] {
+    width:75px;
+    margin:1px 2px;
+    border:1px solid lightgray;
+}
+.shippertitlesearch input[type="image"] {
+    height:18px;
+    margin:1px 2px;
+    vertical-align:top;
+}
+.shipper { 
+    height:250px;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+.vendortitle {
+    height:22px;
+    background-image:url(../../Content/Images/gridtitle.gif); 
+    background-repeat:repeat-x;
+}
+.vendortitlename {
+    float:left;
+    padding:2px 10px;
+}
+.vendortitlesearch {
+    float:right;
+    padding:0px 0px;
+}
+.vendortitlesearch input[type="text"] {
+    width:75px;
+    margin:1px 2px;
+    border:1px solid lightgray;
+}
+.vendortitlesearch input[type="image"] {
+    height:18px;
+    margin:1px 2px;
+    vertical-align:top;
+}
+.vendor { 
+    height:250px;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+
+.gridpickup {
+    width:97%;
+    margin:0% 0.5%;
+}
+.pickuptitle {
+    height:22px;
+    background-image:url(../../Content/Images/gridtitle.gif); 
+    background-repeat:repeat-x;
+}
+.pickuptitlename {
+    float:left;
+    padding:2px 10px;
+}
+.pickup {
+    height:150px;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+
+input {
+    font-size: 11px;
+}
+select {
+    font-size: 11px;
+}
+option {
+    font-size: 11px;
+}
+
+.bold { font-weight: bold; }
+.clear { clear: both;  }
+.clearRight { clear: right; }
+.clearLeft { clear: left; }

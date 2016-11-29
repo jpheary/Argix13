@@ -1,0 +1,145 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Argix13.Imaging.Web", "http://localhost:51257", "{C5749285-7160-48EF-8022-26A09C78C595}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51257"
+		Debug.AspNetCompiler.PhysicalPath = "Argix13.Enterprise\Argix13.Imaging.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51257\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51257"
+		Release.AspNetCompiler.PhysicalPath = "Argix13.Enterprise\Argix13.Imaging.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51257\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Argix13.Enterprise\Argix13.Imaging.Web\"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{229D513C-65FC-40C9-BF50-26DD258E5BBC} = {229D513C-65FC-40C9-BF50-26DD258E5BBC}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Argix13.Enterprise.Services", "http://localhost:51231", "{229D513C-65FC-40C9-BF50-26DD258E5BBC}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51231"
+		Debug.AspNetCompiler.PhysicalPath = "Argix13.Enterprise\Argix13.Enterprise.Services\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51231\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51231"
+		Release.AspNetCompiler.PhysicalPath = "Argix13.Enterprise\Argix13.Enterprise.Services\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51231\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Argix13.Enterprise\Argix13.Enterprise.Services\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Argix13.Reports.Web", "http://localhost:14871", "{99AD2F09-AE43-4B94-8175-96A9988401EA}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_14871"
+		Debug.AspNetCompiler.PhysicalPath = "Argix13.Enterprise\Argix13.Reports.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_14871\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_14871"
+		Release.AspNetCompiler.PhysicalPath = "Argix13.Enterprise\Argix13.Reports.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_14871\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Argix13.Enterprise\Argix13.Reports.Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rgxvmdev:8080/tfs/argix13
+		SccWebProject0 = true
+		SccProjectUniqueName0 = http://localhost:14871
+		SccProjectName0 = Argix13.Enterprise/Argix13.Reports.Web
+		SccAuxPath0 = http://rgxvmdev:8080/tfs/argix13
+		SccLocalPath0 = Argix13.Enterprise\\Argix13.Reports.Web
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice0 = 2
+		SccWebProject1 = true
+		SccProjectUniqueName1 = http://localhost:51257
+		SccProjectName1 = Argix13.Enterprise/Argix13.Imaging.Web
+		SccAuxPath1 = http://rgxvmdev:8080/tfs/argix13
+		SccLocalPath1 = Argix13.Enterprise\\Argix13.Imaging.Web
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice1 = 2
+		SccWebProject2 = true
+		SccProjectUniqueName2 = http://localhost:51231
+		SccProjectName2 = Argix13.Enterprise/Argix13.Enterprise.Services
+		SccAuxPath2 = http://rgxvmdev:8080/tfs/argix13
+		SccLocalPath2 = Argix13.Enterprise\\Argix13.Enterprise.Services
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5749285-7160-48EF-8022-26A09C78C595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5749285-7160-48EF-8022-26A09C78C595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5749285-7160-48EF-8022-26A09C78C595}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5749285-7160-48EF-8022-26A09C78C595}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{229D513C-65FC-40C9-BF50-26DD258E5BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229D513C-65FC-40C9-BF50-26DD258E5BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229D513C-65FC-40C9-BF50-26DD258E5BBC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{229D513C-65FC-40C9-BF50-26DD258E5BBC}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{99AD2F09-AE43-4B94-8175-96A9988401EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AD2F09-AE43-4B94-8175-96A9988401EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AD2F09-AE43-4B94-8175-96A9988401EA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AD2F09-AE43-4B94-8175-96A9988401EA}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rgxvmdev:8080/tfs/argix13
+		SccWebProject0 = true
+		SccProjectUniqueName0 = http://localhost:14871
+		SccProjectName0 = Argix13.Enterprise/Argix13.Enterprise/Argix13.Enterprise/Argix13.Reports.Web
+		SccAuxPath0 = http://rgxvmdev:8080/tfs/argix13
+		SccLocalPath0 = Argix13.Enterprise\\Argix13.Reports.Web
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice0 = 2
+	EndGlobalSection
+EndGlobal

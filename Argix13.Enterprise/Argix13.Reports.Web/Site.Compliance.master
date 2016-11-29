@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Site.Compliance.master.cs" Inherits="SiteComplianceMaster" %>
+<%@ MasterType VirtualPath="~/Site.master" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="Setup" Runat="Server">
+<script type="text/javascript">
+    var daysback = -365, daysforward = 0, daysspread = 365;
+    $(function () {
+        $("#<%=txtFrom.ClientID %>").datepicker({
+            minDate: daysback, maxDate: 0, defaultDate: 0, 
+            onClose: function (selectedDate, instance) {
+                $("#<%=txtTo.ClientID %>").datepicker("option", "minDate", selectedDate);
+
+                var date = $.datepicker.parseDate("mm/dd/yy", selectedDate, instance.settings);
+                date.setDate(date.getDate() + daysspread);
+                var todate = $("#<%=txtTo.ClientID %>").datepicker("getDate");
+                if (todate > date) $("#<%=txtTo.ClientID %>").datepicker("setDate", date);
+            }
+        });
+        $("#<%=txtTo.ClientID %>").datepicker({
+            minDate: 0, maxDate: daysforward, defaultDate: 0, 
+            onClose: function (selectedDate, instance) {
+                $("#<%=txtFrom.ClientID %>").datepicker("option", "maxDate", selectedDate);
+
+                var date = $.datepicker.parseDate("mm/dd/yy", selectedDate, instance.settings);
+                date.setDate(date.getDate() - daysspread);
+                var fromdate = $("#<%=txtFrom.ClientID %>").datepicker("getDate");
+                if (fromdate < date) $("#<%=txtFrom.ClientID %>").datepicker("setDate", date);
+            }
+        });
+    });
+</script>
+<div style="margin:25px 0px 0px 39px">
+    <label for="txtFrom">Pickups&nbsp;</label>
+    <asp:TextBox ID="txtFrom" runat="server" Width="100px" AutoPostBack="true" OnTextChanged="OnFromToDateChanged" />
+    <label for="txtTo">&nbsp;-&nbsp;</label>
+    <asp:TextBox ID="txtTo" runat="server" Width="100px" AutoPostBack="true" OnTextChanged="OnFromToDateChanged" />
+</div>
+<div style="margin:10px 0px 0px 50px">
+    Client&nbsp;
+    <asp:DropDownList id="cboClient" runat="server" Width="288px" DataSourceID="odsClients" DataTextField="ClientName" DataValueField="ClientNumber" AutoPostBack="True" OnSelectedIndexChanged="OnClientChanged" />
+    &nbsp;&nbsp;
+    <asp:CheckBox ID="chkActiveOnly" runat="server" AutoPostBack="true" Text="Active Only" Checked="true" OnCheckedChanged="OnActiveOnlyChecked" />
+</div>
+<div style="margin:10px 0px 0px 50px">
+    Vendor&nbsp;
+    <asp:DropDownList id="cboVendor" runat="server" Width="288px" DataSourceID="odsVendors" DataTextField="VendorSummary" DataValueField="VendorNumber" AppendDataBoundItems="true" AutoPostBack="True" OnSelectedIndexChanged="OnVendorChanged">
+        <asp:ListItem Text="All" Value="" Selected="True" />
+    </asp:DropDownList>
+</div>
+<div style="margin:10px 0px 0px 50px">
+    Vendor Location&nbsp;
+    <asp:DropDownList id="cboVendorLoc" runat="server" Width="288px" DataSourceID="odsVendorLocs" DataTextField="VendorSummary" DataValueField="VendorNumber" AppendDataBoundItems="true" AutoPostBack="True" OnSelectedIndexChanged="OnVendorLocChanged">
+        <asp:ListItem Text="All" Value="" Selected="True" />
+    </asp:DropDownList>
+</div>
+<div style="margin:10px 0px 0px 50px">
+    Agent&nbsp;
+    <asp:DropDownList ID="cboAgent" runat="server" Width="234px" AppendDataBoundItems="true" DataSourceID="odsAgents" DataTextField="AgentSummary" DataValueField="AgentNumber" AutoPostBack="True" OnSelectedIndexChanged="OnAgentChanged">
+        <asp:ListItem Text="All" Value="" Selected="True" />
+    </asp:DropDownList>
+</div>
+<div style="margin:10px 0px 0px 50px">
+    Agent Location&nbsp;
+    <asp:DropDownList id="cboAgentLoc" runat="server" Width="288px" DataSourceID="odsAgentLocs" AppendDataBoundItems="true" DataTextField="AgentSummary" DataValueField="AgentNumber" AutoPostBack="True" OnSelectedIndexChanged="OnAgentLocChanged">
+        <asp:ListItem Text="All" Value="" Selected="True" />
+    </asp:DropDownList>
+</div>
+<div style="margin:10px 0px 0px 50px">
+    <asp:CheckBox ID="chkUseCutoff" runat="server" Text="Use Cutoff Time" Checked="true" />
+</div>
+<asp:ObjectDataSource ID="odsClients" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetSecureClients" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="900">
+    <SelectParameters>
+        <asp:ControlParameter Name="activeOnly" ControlID="chkActiveOnly" PropertyName="Checked" Type="Boolean" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+<asp:ObjectDataSource ID="odsVendors" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetParentVendors" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="600" >
+    <SelectParameters>
+        <asp:ControlParameter Name="clientNumber" ControlID="cboClient" PropertyName="SelectedValue" Type="String" />
+        <asp:Parameter Name="clientTerminal" DefaultValue="" ConvertEmptyStringToNull="true" Type="String" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+<asp:ObjectDataSource ID="odsVendorLocs" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetVendorLocations" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="600" >
+    <SelectParameters>
+        <asp:ControlParameter Name="clientNumber" ControlID="cboClient" PropertyName="SelectedValue" Type="String" />
+        <asp:Parameter Name="clientTerminal" DefaultValue="" ConvertEmptyStringToNull="true" Type="String" />
+        <asp:ControlParameter Name="vendorNumber" ControlID="cboVendor" PropertyName="SelectedValue" ConvertEmptyStringToNull="true" Type="String" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+<asp:ObjectDataSource ID="odsAgents" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetParentAgents" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="900" />
+<asp:ObjectDataSource ID="odsAgentLocs" runat="server" TypeName="Argix.EnterpriseRGateway" SelectMethod="GetAgentLocations" EnableCaching="true" CacheExpirationPolicy="Sliding" CacheDuration="600" >
+    <SelectParameters>
+        <asp:ControlParameter Name="agent" ControlID="cboAgent" PropertyName="SelectedValue" ConvertEmptyStringToNull="true" Type="String" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+</asp:Content>
